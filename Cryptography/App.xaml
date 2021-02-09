@@ -1,0 +1,43 @@
+<Application x:Class="Cryptography.App" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:Cryptography" 
+             StartupUri="View/MainWindow.xaml" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d1p1:Ignorable="d" 
+             xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Cryptography.ViewModel"
+             xmlns:views="clr-namespace:Cryptography.View">
+  <Application.Resources>
+    <ResourceDictionary>
+      <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:Cryptography.ViewModel" />
+            <DataTemplate DataType="{x:Type vm:RegisterVM}">
+                <views:RegisterView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:LoginVM}">
+                <views:LoginView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:StudentMenuVM}">
+                <views:StudentMenuView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:TeacherMenuVM}">
+                <views:TeacherMenuView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:UseVM}">
+                <views:UseView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:InfoVM}">
+                <views:InfoView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:SeePreviousUsesVM}">
+                <views:SeePreviousUsesView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:SeePreviousUsesUserVM}">
+                <views:SeePreviousUsesUserView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:SeeUsersVM}">
+                <views:SeeUsersView/>
+            </DataTemplate>            
+        </ResourceDictionary>
+  </Application.Resources>
+</Application>
